@@ -1,6 +1,46 @@
 function App() {
   return (
     <div className="wrapper">
+      <div style={{ display: "none" }} className="overlay">
+        <div className="drawer">
+          <h2>
+            Корзина <img width={32} height={32} className="btn_remove" src="/img/btn_remove.svg" alt="remove" />
+          </h2>
+          <div className="items">
+            <div className="cartItem">
+              <img width={70} height={70} src="/img/image1.jpg" alt="sneakers" />
+              <div className="cartItem__info">
+                <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+                <b>12 999 руб</b>
+              </div>
+              <img className="btn_remove" src="/img/btn_remove.svg" alt="remove" />
+            </div>
+            <div className="cartItem">
+              <img width={70} height={70} src="/img/image2.jpg" alt="sneakers" />
+              <div className="cartItem__info">
+                <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+                <b>12 999 руб</b>
+              </div>
+              <img className="btn_remove" src="/img/btn_remove.svg" alt="remove" />
+            </div>
+          </div>
+          <ul className="basket-list">
+            <li className="basket-list__item">
+              <span className="basket-list__title">Итого:</span>
+              <div></div>
+              <b className="basket-list__price">21 498 руб.</b>
+            </li>
+            <li className="basket-list__item">
+              <span className="basket-list__title">Налог 5%:</span>
+              <div></div>
+              <b className="basket-list__price">1074 руб.</b>
+            </li>
+            <button className="btn__green">
+              Оформить заказ <img width={15} height={12} src="/img/arrow.svg" alt="arrow" />
+            </button>
+          </ul>
+        </div>
+      </div>
       <header className="header">
         <div className="headerLeft">
           <img width={"40px"} height={"40px"} src="/img/logo.svg" alt="" />
@@ -49,9 +89,18 @@ function App() {
         </ul>
       </header>
       <div className="content">
-        <h1>Все кросовки</h1>
+        <div className="content__title">
+          <h1>Все кросовки</h1>
+          <div className="search">
+            <img width={"14.25px"} height={"14.25px"} src="/img/search.svg" alt="Search" />
+            <input type="text" name="" id="" placeholder="Поиск..." />
+          </div>
+        </div>
         <div className="content__wrapper">
           <div className="card">
+            <div className="favourite">
+              <img src="/img/heart_unliked.svg" alt="unliked" />
+            </div>
             <img width={"133px"} height={"112px"} src="/img/image1.jpg" alt="" />
             <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
             <div className="card__item">
